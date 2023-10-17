@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/inc/tcpServer.hh
+chrono
+-
+cstdint
+-
+iostream
+-
+netinet/in.h
+-
+sys/socket.h
+-
+
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/src/tcpServer.cpp
+../inc/tcpServer.hh
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/inc/tcpServer.hh
+cerrno
+-
+cstring
+-
+netinet/in.h
+-
+stdexcept
+-
+sys/socket.h
+-
+
