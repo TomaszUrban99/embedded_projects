@@ -1,0 +1,8 @@
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/CMakeFiles/rebuild_cache.dir
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/CMakeFiles/edit_cache.dir
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/CMakeFiles/tcp_client.dir
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/src/CMakeFiles/rebuild_cache.dir
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/src/CMakeFiles/edit_cache.dir
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/src/CMakeFiles/tcp_client_class.dir
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/inc/CMakeFiles/rebuild_cache.dir
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/build/inc/CMakeFiles/edit_cache.dir

@@ -17,18 +17,18 @@ netinet/in.h
 -
 sys/socket.h
 -
-
-/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/src/tcpServer.cpp
-../inc/tcpServer.hh
-/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/inc/tcpServer.hh
+arpa/inet.h
+-
 cerrno
 -
 cstring
 -
-netinet/in.h
--
 stdexcept
 -
+
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/src/tcpServer.cpp
+../inc/tcpServer.hh
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/inc/tcpServer.hh
 sys/socket.h
 -
 

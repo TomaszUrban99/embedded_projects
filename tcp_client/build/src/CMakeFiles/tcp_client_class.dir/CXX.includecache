@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/inc/tcp_client.hh
+cstdint
+-
+cstring
+-
+string
+-
+netinet/in.h
+-
+stdexcept
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/src/tcp_client.cpp
+../inc/tcp_client.hh
+/home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/inc/tcp_client.hh
+cstdint
+-
+sys/socket.h
+-
+

@@ -17,6 +17,14 @@ netinet/in.h
 -
 sys/socket.h
 -
+arpa/inet.h
+-
+cerrno
+-
+cstring
+-
+stdexcept
+-
 
 /home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/src/main.cpp
 cerrno

@@ -20,5 +20,8 @@ int main (int argc, char** argv){
     }
     
     tcpServer server(atoi(argv[1]));
+
+    server.init_tcp_server();
+    
     return 0;
 }

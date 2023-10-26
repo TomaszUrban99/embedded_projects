@@ -1,13 +1,9 @@
 #include "../inc/tcpServer.hh"
-#include <cerrno>
-#include <cstring>
-#include <netinet/in.h>
-#include <stdexcept>
 #include <sys/socket.h>
 
 tcpServer::tcpServer(uint16_t portNumber)
 {
-    _socket_id = socket(AF_INET, SOCK_DGRAM, 0);
+    _socket_id = socket(AF_INET, SOCK_STREAM, 0);
 
     /* Checke whether socket has been created correctly */
     if (_socket_id == -1)
@@ -19,14 +15,26 @@ tcpServer::tcpServer(uint16_t portNumber)
     /* Port number */
     _server_address.sin_port = htons(portNumber);
     /* Incoming IP Adress*/
-    _server_address.sin_addr.s_addr = htonl(INADDR_ANY);
+    _server_address.sin_addr.s_addr = inet_addr("127.0.0.1");
 
     /* Bind socket to address */
     if ( bind(_socket_id, (struct sockaddr*) &_server_address, sizeof(_server_address)) == -1 )
         throw std::runtime_error(strerror(errno));
+
+    
 }
 
 int tcpServer::init_tcp_server()
 {
-    
+    if(listen(_socket_id,0) == -1){
+        throw std::runtime_error(strerror(errno));
+    };
+
+    _socket_client_id = accept(_socket_id, nullptr, nullptr);
+
+    if ( _socket_client_id < 0)
+        throw std::runtime_error(strerror(errno));
+
+    std::cout << "Succesfully connected" << std::endl;
+    return 0;
 }
