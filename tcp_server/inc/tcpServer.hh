@@ -28,7 +28,7 @@ class tcpServer{
 
     int init_tcp_server ();
 
-    void read ( char **buffer);
+    int receive(std::string &buffer);
 };
 
 #endif

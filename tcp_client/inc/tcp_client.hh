@@ -7,6 +7,7 @@
 #include <netinet/in.h>
 #include <stdexcept>
 #include <sys/socket.h>
+#include <iostream>
 #include <arpa/inet.h>
 
 class tcp_client{
@@ -21,6 +22,8 @@ class tcp_client{
     int connect();
 
     int send(std::string &buffer);
+
+    int read(std::string &buffer);
 };
 
 #endif

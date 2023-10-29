@@ -29,6 +29,14 @@ stdexcept
 /home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/src/tcpServer.cpp
 ../inc/tcpServer.hh
 /home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_server/inc/tcpServer.hh
+algorithm
+-
+iterator
+-
+netinet/in.h
+-
+string
+-
 sys/socket.h
 -
 

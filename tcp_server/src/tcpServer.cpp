@@ -1,4 +1,8 @@
 #include "../inc/tcpServer.hh"
+#include <algorithm>
+#include <iterator>
+#include <netinet/in.h>
+#include <string>
 #include <sys/socket.h>
 
 tcpServer::tcpServer(uint16_t portNumber)
@@ -36,5 +40,31 @@ int tcpServer::init_tcp_server()
         throw std::runtime_error(strerror(errno));
 
     std::cout << "Succesfully connected" << std::endl;
+    return 0;
+}
+
+int tcpServer::receive(std::string &buffer){
+
+    char *buff;
+    buff = new char[1024];
+
+    int received_bytes = recv(_socket_client_id, buff, sizeof(buff), 0);
+    int all = 0;
+    
+    while( received_bytes > 0){
+        
+        buff = buff + received_bytes;
+        all += received_bytes;
+        std::cout << buff << std::endl;
+        received_bytes = recv(_socket_client_id, buff, sizeof(buff), 0);
+        std::cout << received_bytes << std::endl;
+    }
+
+    buff = buff - all;
+    std::string buffer2 (buff);
+    buffer = buffer2;
+
+    delete []  buff;
+
     return 0;
 }

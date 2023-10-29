@@ -19,6 +19,8 @@ stdexcept
 -
 sys/socket.h
 -
+iostream
+-
 arpa/inet.h
 -
 
@@ -26,6 +28,8 @@ arpa/inet.h
 ../inc/tcp_client.hh
 /home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/inc/tcp_client.hh
 cstdint
+-
+iterator
 -
 sys/socket.h
 -

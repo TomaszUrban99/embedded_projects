@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "../inc/tcp_client.hh"
 
 int main (int argc, char** argv){
@@ -7,5 +8,10 @@ int main (int argc, char** argv){
 
     if(newClient.connect() < 0)
         std::cout << "Failed to connect" << std::endl;
+
+    std::string buffer(argv[2]);
+
+    std::cout << newClient.send(buffer);
+
     return 0;
 }

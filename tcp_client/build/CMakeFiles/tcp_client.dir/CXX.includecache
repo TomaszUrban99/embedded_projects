@@ -19,11 +19,15 @@ stdexcept
 -
 sys/socket.h
 -
+iostream
+-
 arpa/inet.h
 -
 
 /home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/src/main.cpp
 iostream
+-
+string
 -
 ../inc/tcp_client.hh
 /home/tomasz/Projects/Embedded_Projects/embedded_projects/tcp_client/inc/tcp_client.hh
