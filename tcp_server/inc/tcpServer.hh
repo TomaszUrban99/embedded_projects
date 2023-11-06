@@ -29,6 +29,16 @@ class tcpServer{
     int init_tcp_server ();
 
     int receive(std::string &buffer);
+
+    /*!
+        \brief Method for sending string message
+        \par &buffer, std::string reference to string with
+        message to send
+
+        
+        \retval Number of send bytes
+    */
+    int send(std::string &buffer);
 };
 
 #endif

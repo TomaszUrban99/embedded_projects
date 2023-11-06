@@ -26,7 +26,9 @@ int main (int argc, char** argv){
 
     server.receive(buffer);
 
-    std::cout << buffer << std::endl;
+    std::cout << "Received: " << buffer << std::endl;
+
+    std::cout << "Send bytes: " << server.send(buffer);
     
     return 0;
 }

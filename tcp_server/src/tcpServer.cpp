@@ -45,26 +45,30 @@ int tcpServer::init_tcp_server()
 
 int tcpServer::receive(std::string &buffer){
 
-    char *buff;
-    buff = new char[1024];
+    char buffer_char[1024];
 
-    int received_bytes = recv(_socket_client_id, buff, sizeof(buff), 0);
-    int all = 0;
+    recv(_socket_client_id, buffer_char, sizeof(buffer_char), 0);
+
+    /* Check whether previous data are removed */
+    buffer.assign(buffer_char);
     
-    while( received_bytes > 0){
-        
-        buff = buff + received_bytes;
-        all += received_bytes;
-        std::cout << buff << std::endl;
-        received_bytes = recv(_socket_client_id, buff, sizeof(buff), 0);
-        std::cout << received_bytes << std::endl;
+    return buffer.size();
+}
+
+int tcpServer::send(std::string &buffer){
+    
+    int bufferSize = buffer.size();
+
+    std::string::iterator it = buffer.begin();
+
+    int send_bytes = ::send(_socket_client_id, it.base(), bufferSize, 0);
+    int all = 0;
+
+    while ( send_bytes > 0){
+        all += send_bytes;
+        it += send_bytes;
+        send_bytes = ::send(_socket_client_id, it.base(), bufferSize-all, 0);
     }
 
-    buff = buff - all;
-    std::string buffer2 (buff);
-    buffer = buffer2;
-
-    delete []  buff;
-
-    return 0;
+    return all;
 }

@@ -1,6 +1,8 @@
 #include "../inc/tcp_client.hh"
 #include <cstdint>
+#include <cstring>
 #include <iterator>
+#include <string>
 #include <sys/socket.h>
 
 tcp_client::tcp_client(uint16_t portNumber, char *ipAdress){
@@ -41,12 +43,22 @@ int tcp_client::send(std::string &buffer ){
         all += bytes_sent;
         it += bytes_sent;
         bytes_sent = ::send(_socket_id, it.base(), bufferSize-all, 0);
-        std::cout << *it << std::endl;
     }
 
     return all;
 }
 
 int tcp_client::read(std::string &buffer){
-    return 0;
+
+    char buffer_char[1024] = "";
+
+    int bytes_read = recv(_socket_id, buffer_char, sizeof(buffer_char), 0);
+
+    if ( bytes_read < 0){
+        return -1;
+    }
+    
+    buffer.assign(buffer_char);
+
+    return bytes_read;
 }

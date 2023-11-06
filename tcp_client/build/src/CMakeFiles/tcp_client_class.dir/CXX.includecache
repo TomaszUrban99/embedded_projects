@@ -31,6 +31,8 @@ cstdint
 -
 iterator
 -
+string
+-
 sys/socket.h
 -
 

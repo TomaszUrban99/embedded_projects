@@ -13,5 +13,11 @@ int main (int argc, char** argv){
 
     std::cout << newClient.send(buffer);
 
+    buffer.clear();
+    
+    newClient.read(buffer);
+
+    std::cout << "Received from server: " << buffer << std::endl;
+
     return 0;
 }
