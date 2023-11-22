@@ -28,6 +28,11 @@ class tcpServer{
 
     int init_tcp_server ();
 
+    /*!
+        \brief Method for starting tcp_server
+    */
+    int start_tcp_server ();
+
     int receive(std::string &buffer);
 
     /*!
